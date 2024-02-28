@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .error-message {
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Site feito por Breno (Oliver)</h1>
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return validateLogin()">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+      <input type="submit" value="Entrar">
+    </form>
+    <p id="errorMessage" class="error-message" style="display: none;">Usuário ou senha incorretos. Por favor, tente novamente.</p>
+  </div>
+
+  <script>
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "Oliver" && password === "Oliveira") {
+        return true;  // Permite o envio do formulário
+      } else {
+        document.getElementById("errorMessage").style.display = "block";
+        window.location.href = "https://youtu.be/PHvhOPM_5ak?si=25ig_MkZL7guKOaj";
+        return false;  // Impede o envio do formulário
+      }
+    }
+  </script>
+
+</body>
+</html>
